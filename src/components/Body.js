@@ -1,7 +1,7 @@
 import React from "react";
 import "./Body.css";
 import Header from "./Header";
-import { useStateValue } from "./StateProvider";
+import { useStateValue } from "../StateProvider";
 import SongRow from "./SongRow";
 import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import FavoriteIcon from "@material-ui/icons/Favorite";
@@ -13,7 +13,7 @@ function Body({ spotify }) {
   const playPlaylist = (id) => {
     spotify
       .play({
-        context_uri: `spotify:playlist:37i9dQZEVXcJZyENOWUFo7`,
+        context_uri: `spotify:playlist:37i9dQZEVXcCwV2XDGll2z?gtm=1`,
       })
       .then((res) => {
         spotify.getMyCurrentPlayingTrack().then((r) => {

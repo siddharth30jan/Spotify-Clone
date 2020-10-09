@@ -25,12 +25,14 @@ function App() {
         token: _token,
       });
 
-      s.getPlaylist("37i9dQZEVXcJZyENOWUFo7").then((response) =>
-        dispatch({
-          type: "SET_DISCOVER_WEEKLY",
-          discover_weekly: response,
-        })
-      );
+      s.getPlaylist("37i9dQZEVXcCwV2XDGll2z?gtm=1")
+        .then((response) =>
+          dispatch({
+            type: "SET_DISCOVER_WEEKLY",
+            discover_weekly: response,
+          })
+        )
+        .catch((err) => alert(err));
 
       s.getMyTopArtists().then((response) =>
         dispatch({
